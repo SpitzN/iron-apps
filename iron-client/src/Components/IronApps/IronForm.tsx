@@ -77,7 +77,7 @@ const IronForm: React.FC = (props) => {
 
   const onResetHandler = () => {
     dispatch(resetForm());
-    window.location.reload();
+
   };
 
   const onSubmitForm = (event: React.FormEvent<HTMLFormElement>) => {

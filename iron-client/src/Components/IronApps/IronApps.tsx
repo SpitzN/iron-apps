@@ -21,6 +21,7 @@ const Iron: React.FC = () => {
 
   const onEditHandler = () => {
     dispatch(resetForm());
+    window.location.reload();
   };
 
   console.log(data);
