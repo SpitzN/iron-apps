@@ -12,6 +12,10 @@ export class AppService {
     private httpService: HttpService,
   ) {}
 
+  getHello(): string {
+    return 'Sanity Check, Hello World!';
+  }
+
   getRandomApps(age: number, rating: number, categories: string[]) {
     const apps = this.httpService
       .get(`https://api.github.com/gists/${GIST_ID}`)

@@ -1,9 +1,14 @@
 import { Controller, Get, NotFoundException, Query } from '@nestjs/common';
 import { AppService } from './app.service';
 
-@Controller('iron-apps')
+@Controller('api')
 export class AppController {
   constructor(public appService: AppService) {}
+
+  @Get()
+  getHello(): string {
+    return this.appService.getHello();
+  }
 
   @Get('random/')
   randomThreeApps(

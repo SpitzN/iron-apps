@@ -17,6 +17,12 @@ describe('AppController', () => {
     appController = app.get<AppController>(AppController);
   });
 
+  describe('root', () => {
+    it('should return "Sanity Check, Hello World!"', () => {
+      expect(appController.getHello()).toBe('Sanity Check, Hello World!');
+    });
+  });
+
   describe('randomThreeApps', () => {
     it('should return 3 random apps', () => {
       expect(
