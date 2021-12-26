@@ -29,17 +29,6 @@
   list-style: none;
 }
 
-.random-btn {
-  margin: 0.5rem;
-  padding: 0.5rem;
-  border: 1px solid var(--color-grey-dark-1);
-  border-radius: 0.5rem;
-  background-color: var(--color-secondary-light);
-  color: var(--color-grey-dark-1);
-  font-size: 2rem;
-  cursor: pointer;
-}
-
 .edit-btn {
   margin: 0.5rem;
   padding: 0.5rem;
@@ -47,6 +36,6 @@
   border-radius: 0.5rem;
   background-color: var(--color-secondary-light);
   color: var(--color-grey-dark-1);
-  font-size: 2rem;
+  font-size: 1rem;
   cursor: pointer;
 }

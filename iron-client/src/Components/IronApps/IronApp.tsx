@@ -7,7 +7,7 @@ interface IronAppProps {
   onClick?: (app: IronAppType) => void;
 }
 
-const IronApp: React.FC<IronAppProps> = (props: any) => {
+const IronApp: React.FC<IronAppProps> = (props) => {
   const { app } = props;
   const {
     name,

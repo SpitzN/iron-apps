@@ -1,8 +1,7 @@
-import { useAppSelector, useAppDispatch } from "../../app/hooks";
+import { useAppSelector } from "../../app/hooks";
 import { useFetchRandomAppsQuery } from "../../features/ironAppsAPI";
 import IronApp from "./IronApp";
 import classes from "./IronApps.module.css";
-import { resetForm } from "../../features/formSlice";
 
 const Iron: React.FC = () => {
   const { age, appRating, categories } = useAppSelector((state) => state.form);
@@ -11,8 +10,6 @@ const Iron: React.FC = () => {
     appRating,
     categories,
   });
-
-  const dispatch = useAppDispatch();
 
   const renderIronApps = () => {
     if (data) {
@@ -24,19 +21,11 @@ const Iron: React.FC = () => {
     console.log("onEditHandler");
   };
 
-  const onResetHandler = () => {
-    dispatch(resetForm());
-    window.location.reload();
-  };
-
   console.log(data);
   return (
     <div className={classes["apps-list"]}>
       <h1>3 Random Apps</h1>
       <div className={classes["list-controls"]}>
-        <div className={classes["random-btn"]} onClick={onResetHandler}>
-          Reset
-        </div>
         <div className={classes["edit-btn"]} onClick={onEditHandler}>
           Edit
         </div>

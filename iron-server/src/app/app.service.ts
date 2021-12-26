@@ -34,12 +34,4 @@ export class AppService {
       );
     return apps;
   }
-
-  // getAllApps() {
-  //   return this.appRepository.getAllApps();
-  // }
-
-  // getRandomApps(age: number, rating: number, categories: string[]) {
-  //   return this.appRepository.getRandomThreeApps(age, rating, categories);
-  // }
 }

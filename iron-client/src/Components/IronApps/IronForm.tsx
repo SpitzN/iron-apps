@@ -8,6 +8,7 @@ import {
   setAppRating,
   setCategories,
   setIsValid,
+  resetForm,
 } from "../../features/formSlice";
 
 const categories = [
@@ -46,11 +47,6 @@ const IronForm: React.FC = (props) => {
   const categoriesState = useAppSelector((state) => state.form.categories);
   const ageState = useAppSelector((state) => state.form.age);
   const ratingState = useAppSelector((state) => state.form.appRating);
-  // const { date, isFetching } = useFetchRandomAppsQuery({
-  //   ageState,
-  //   categoriesState,
-  //   ratingState,
-  // });
 
   const onDateInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = event.target;
@@ -77,6 +73,11 @@ const IronForm: React.FC = (props) => {
         setCategories(categoriesState.filter((category) => category !== value))
       );
     }
+  };
+
+  const onResetHandler = () => {
+    dispatch(resetForm());
+    window.location.reload();
   };
 
   const onSubmitForm = (event: React.FormEvent<HTMLFormElement>) => {
@@ -132,6 +133,9 @@ const IronForm: React.FC = (props) => {
         </div>
         <div className={classes["form-group"]}>
           <button className={classes["submit-button"]}>Submit</button>
+          <div className={classes["reset-btn"]} onClick={onResetHandler}>
+            Reset
+          </div>
         </div>
       </form>
     </div>

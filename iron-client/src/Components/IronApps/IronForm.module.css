@@ -68,4 +68,17 @@
 .category-input {
   align-items: center;
   justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.reset-btn {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid var(--color-grey-dark-1);
+  border-radius: 0.5rem;
+  background-color: var(--color-secondary-light);
+  color: var(--color-grey-dark-1);
+  font-size: 1rem;
+  cursor: pointer;
 }
