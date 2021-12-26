@@ -1,6 +1,6 @@
 FROM node
 
-WORKDIR /appBackend
+WORKDIR /app
 
 COPY package.json .
 
@@ -10,4 +10,5 @@ COPY . .
 
 EXPOSE 7000
 
-CMD ["npm", "start"]
+
+CMD ["npm", "run", "start:dev"]

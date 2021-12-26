@@ -1,0 +1,28 @@
+version: '3.8'
+services:
+  backend:
+    build: ./iron-server
+    ports:
+      - "7000:7000"
+    volumes:
+      - ./iron-server:/app
+      - /app/node_modules
+    
+    stdin_open: true
+    tty: true 
+    networks:
+      - iron-net
+
+  frontend:
+    build: ./iron-client
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./iron-client:/app
+      - /app/node_modules
+    stdin_open: true
+    tty: true
+    networks:
+      - iron-net
+    depends_on:
+      - backend
