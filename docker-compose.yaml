@@ -10,9 +10,6 @@ services:
     container_name: iron-server
     stdin_open: true
     tty: true 
-    networks:
-      - iron-net
-
   frontend:
     build: ./iron-client
     ports:
@@ -23,7 +20,5 @@ services:
     container_name: iron-client
     stdin_open: true
     tty: true
-    networks:
-      - iron-net
     depends_on:
       - backend
