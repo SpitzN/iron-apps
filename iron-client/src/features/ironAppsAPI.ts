@@ -25,7 +25,7 @@ type IronApps = IronApp[];
 export const ironAppsApi = createApi({
   reducerPath: "ironAppsAPI",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://iron-net:7000/api",
+    baseUrl: "http://iron-server:7000/api",
   }),
   tagTypes: ["ironApps"],
   endpoints: (builder) => ({

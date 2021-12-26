@@ -7,7 +7,7 @@ services:
     volumes:
       - ./iron-server:/app
       - /app/node_modules
-    
+    container_name: iron-server
     stdin_open: true
     tty: true 
     networks:
@@ -20,6 +20,7 @@ services:
     volumes:
       - ./iron-client:/app
       - /app/node_modules
+    container_name: iron-client
     stdin_open: true
     tty: true
     networks:
