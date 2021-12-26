@@ -1,10 +1,12 @@
-import { useAppSelector } from "../../app/hooks";
+import { useAppSelector, useAppDispatch } from "../../app/hooks";
 import { useFetchRandomAppsQuery } from "../../features/ironAppsAPI";
 import IronApp from "./IronApp";
 import classes from "./IronApps.module.css";
+import { resetForm } from "../../features/formSlice";
 
 const Iron: React.FC = () => {
   const { age, appRating, categories } = useAppSelector((state) => state.form);
+  const dispatch = useAppDispatch();
   const { data, isFetching, isLoading } = useFetchRandomAppsQuery({
     age,
     appRating,
@@ -18,7 +20,8 @@ const Iron: React.FC = () => {
   };
 
   const onEditHandler = () => {
-    console.log("onEditHandler");
+    dispatch(resetForm());
+    // window.location.reload();
   };
 
   console.log(data);

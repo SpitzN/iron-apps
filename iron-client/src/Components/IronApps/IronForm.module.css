@@ -71,8 +71,7 @@
   display: flex;
   flex-direction: column;
 }
-
-.reset-btn {
+.submit-button {
   margin: 0.5rem;
   padding: 0.5rem;
   border: 1px solid var(--color-grey-dark-1);
@@ -81,4 +80,24 @@
   color: var(--color-grey-dark-1);
   font-size: 1rem;
   cursor: pointer;
+}
+.submit-button:hover {
+  background-color: var(--color-secondary-dark);
+  color: var(--color-secondary-white);
+}
+
+.reset-btn {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid var(--color-grey-dark-1);
+  border-radius: 0.5rem;
+  background-color: var(--color-grey-light-2);
+  color: var(--color-grey-dark-1);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.reset-btn:hover {
+  background-color: var(--color-grey-dark-1);
+  color: var(--color-grey-light-1);
 }
